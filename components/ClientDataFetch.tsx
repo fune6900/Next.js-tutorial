@@ -14,6 +14,7 @@ const ClientDataFetch = () => {
     fetch('https://dummyjson.com/todos')
     .then(res => res.json())
     .then(setTodo);
+    console.log(todo);
   }, []);
 
   if (todo === null) return <Box>Loading...</Box>;
