@@ -28,3 +28,4 @@ const ClientDataFetch = () => {
 }
 
 export default ClientDataFetch;
+
