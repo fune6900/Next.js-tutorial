@@ -6,8 +6,10 @@ type Todo = {
   todo: string;
 };
 
-const StaticServerDataFetch = async () => {
-  const res = await fetch('https://dummyjson.com/todos/random');
+const DynamicServerDataFetch = async () => {
+  const res = await fetch('https://dummyjson.com/todos/random', {
+    cache: 'no-store',
+  });
   const todo: Todo = await res.json();
   console.log(todo);
 
@@ -15,11 +17,11 @@ const StaticServerDataFetch = async () => {
 
   return (
     <Box>
-      <h2>Static Server Data Fetching</h2>
+      <h2>Dynamic Server Data Fetching</h2>
       <p>ID: {todo.id}</p>
       <p>Todo: {todo.todo}</p>
     </Box>
   )
 }
 
-export default StaticServerDataFetch;
+export default DynamicServerDataFetch;

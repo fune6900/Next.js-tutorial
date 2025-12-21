@@ -11,7 +11,7 @@ const ClientDataFetch = () => {
   const [todo, setTodo] = useState<Todo | null>(null);
 
   useEffect(() => {
-    fetch('https://dummyjson.com/todos')
+    fetch('https://dummyjson.com/todos/random')
     .then(res => res.json())
     .then(setTodo);
     console.log(todo);
